@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace colculator
 {
@@ -12,26 +12,32 @@ namespace colculator
             string symbol = Console.ReadLine();
             Console.WriteLine("Введите второе число");
             string num2 = Console.ReadLine();
-            if (symbol == "+")
+            try
             {
-                Console.WriteLine($"Ответ: {Convert.ToInt32(num1) + Convert.ToInt32(num2)}");
-            }
-            else if (symbol == "-")
-            {
-                Console.WriteLine($"Ответ: {Convert.ToInt32(num1) - Convert.ToInt32(num2)}");
-            }
-            else if (symbol == "*")
-            {
-                Console.WriteLine($"Ответ: {Convert.ToInt32(num1) * Convert.ToInt32(num2)}");
-            }
-            else if (symbol == ":")
-            {
-                Console.WriteLine($"Ответ: {Convert.ToInt32(num1) : Convert.ToInt32(num2)}");
-            }
-            else
-            {
-                Console.WriteLine("Вы ввели неверный символ!");
-            }
+	            if (symbol == "+")
+	            {
+	                Console.WriteLine($"Ответ: {Convert.ToInt32(num1) + Convert.ToInt32(num2)}");
+	            }
+	            else if (symbol == "-")
+	            {
+	                Console.WriteLine($"Ответ: {Convert.ToInt32(num1) - Convert.ToInt32(num2)}");
+	            }
+	            else if (symbol == "*")
+	            {
+	                Console.WriteLine($"Ответ: {Convert.ToInt32(num1) * Convert.ToInt32(num2)}");
+	            }
+	            else if (symbol == ":")
+	            {
+	                Console.WriteLine($"Ответ: {Convert.ToInt32(num1) : Convert.ToInt32(num2)}");
+	            }
+	            else
+	            {
+	                Console.WriteLine("Вы ввели неверный символ!");
+	            }
+	        } catch (Exception)
+	        {
+				Console.WriteLine("Прооизошла ошибка!");
+	        }
 
         }
     }
