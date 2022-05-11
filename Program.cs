@@ -28,7 +28,7 @@ namespace colculator
 	            }
 	            else if (symbol == ":")
 	            {
-	                Console.WriteLine($"Ответ: {Convert.ToInt32(num1) : Convert.ToInt32(num2)}");
+	                Console.WriteLine($"Ответ: {Convert.ToInt32(num1) / Convert.ToInt32(num2)}");
 	            }
 	            else
 	            {
